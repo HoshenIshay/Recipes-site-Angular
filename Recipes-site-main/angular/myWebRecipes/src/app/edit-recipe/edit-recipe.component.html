@@ -1,0 +1,64 @@
+
+<div id="form">
+  <div id="aaa">
+    <h4>קוד מתכון</h4>
+<input type="text" placeholder="קוד מתכון" [(ngModel)]="thisRecipe.RecipeCode"/>
+<div>
+    <h4>שם מתכון</h4>
+    <input type="text" placeholder="שם מתכון" [(ngModel)]="thisRecipe.RecipeName"/></div>
+<div>
+    <h4>משך זמן הכנה</h4>
+    <input type="text" placeholder="משך זמן הכנה(בדקות)" [(ngModel)]="thisRecipe.RecipePreparationTime"/></div>
+<div>
+    <h4>תמונה</h4>
+    <input type="file" placeholder="תמונת מתכון" [(ngModel)]="image"/></div>
+<div >
+    <h4>קטגוריה</h4>
+    <select name="category" id="category" [(ngModel)]="category">
+    <option value="1">עוגות יום הולדת</option>
+    <option value="2">עוגיות</option>
+    <option value="3">עוגות</option>
+    
+  </select></div>
+  <div>
+    <h4>רמת קושי</h4>
+    <select name="category" id="category" [(ngModel)]="thisRecipe.RecipeLevel">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    
+  </select></div>
+  <div>
+    <h4>?האם להציג תמונה</h4>
+    <div >
+        <label >
+          <input [(ngModel)]="yes" type="radio" name="choice-radio" value="yes" checked>
+          Yes
+        </label>
+        <label>
+          <input type="radio" name="choice-radio" value="no" checked>
+          No
+        </label>
+      </div>
+
+</div>
+</div>
+  <div id="abc">
+  <div id="input">
+      <h4>מרכיבים</h4>
+     <div *ngFor="let x of ingredients;let i=index; trackBy:funcindex"> <input id="in1"[(ngModel)]="ingredients[i]" type="text" (keydown)="addInputIng()"/>
+ </div> </div>
+ <div  id="input">
+    <h4>הוראות הכנה</h4>
+   <div *ngFor="let x of preperation;let i=index; trackBy:funcindex"> <input id="in" [(ngModel)]="preperation[i]" type="text" (keydown)="addInputPrep()"/>
+</div> 
+<div id="save">
+  <input id="bb" type="button" value="ביטול" (click)="cancal()"/>
+  <input id="bb" type="button" value="שמור שינויים" (click)="saveChanges()"/>
+</div>
+</div>
+</div>
+
+</div>

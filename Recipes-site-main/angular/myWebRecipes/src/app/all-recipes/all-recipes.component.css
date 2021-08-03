@@ -1,0 +1,29 @@
+#allRecipes{
+    display:flex;
+    flex-wrap: wrap;
+}
+body{
+    background-color: cornsilk;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: 8px;
+    
+}
+#sizeStar{
+    width: 30px;
+    height: 30px;
+}
+.card {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+ #sos{
+     margin-right: 10px;
+ }   

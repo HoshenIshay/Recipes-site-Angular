@@ -1,0 +1,52 @@
+<body>
+<div id="page">
+<div class="cont_principal">
+    <div class="cont_central">
+      <div class="cont_modal cont_modal_active">
+      <div class="cont_photo">
+    <div class="cont_img_back">
+        <img src="{{thisRecipe.RecipeRoutImage}}" alt="" />
+        </div>
+    <div class="cont_mins">
+        <div class="sub_mins">
+      <h3 id="time">{{thisRecipe.RecipePreparationTime|pipeTime}}</h3>
+    
+      </div>
+     
+        </div>
+    <div class="cont_servings">
+       <div *ngIf="ifBirthday()" ><img src="../assets/birthday-cake.png"  width="20" height="20"/></div>
+       <div *ngIf="ifCookie()"><img src="../assets/cookie.png"  width="20" height="20"/></div>
+       <div *ngIf="ifCakey()"><img src="../assets/cake.png"  width="20" height="20"/></div>
+    <span  *ngIf="ifBirthday()">birthday</span>
+    <span *ngIf="ifCookie()">cookies</span>
+    <span *ngIf="ifCakey()">cakes</span>
+        </div>
+    <div class="cont_detalles">
+        <h3>{{thisRecipe.RecipeName}}</h3>
+    
+        </div>
+        </div>
+       
+        <div id="all">
+          <div id="www">
+        <h4>החומרים:</h4>
+      
+        <div id="ingridients">
+          <div *ngFor="let x of ingredients;let i=index"> 
+            <p > {{ingredients[i]}}</p>
+        </div></div></div>
+        <div>
+        <h4>אופן ההכנה:</h4>
+        <div id="preperation" >
+          <div *ngFor="let x of preperation;let i=index"> 
+            <p >{{i+1}} {{preperation[i]}}</p>
+          </div> 
+        </div></div></div>
+
+      </div></div></div></div>
+</body>
+
+
+
+   

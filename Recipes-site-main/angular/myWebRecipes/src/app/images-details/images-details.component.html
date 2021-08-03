@@ -1,0 +1,24 @@
+
+<div id="vueBind" class="container">
+    <div v-for="data in content" class="card"  >
+      <div class="imgBox"  (click)="specRecipe(thisRecipe.RecipeCode)">
+        <img :src="{{thisRecipe.RecipeRoutImage}}" :alt="data.title">
+      </div>
+      <div class="content">
+        <div class="contentBox">
+          <h3>{{thisRecipe.RecipeName}}<br><span>{{thisRecipe.RecipePreparationTime|pipeTime}}</span></h3>
+        </div>
+        <div>
+        <ul class="social">
+          <li *ngFor="let x of this.arrLevel"  > 
+            <img :src="../assets/star.png" width="13" height="13"></li> </ul></div>
+            <div>
+            <ul class="social"> 
+          <li *ngIf="ifCanEdit()" (click)="edit(thisRecipe.RecipeCode)"> <img :src="../assets/edit.png" width="13" height="13"></li>
+          <li *ngIf="ifCanEdit()" (click)="delete(thisRecipe.RecipeCode)"> <img :src="../assets/delete.png" width="13" height="13"></li>
+          
+        </ul></div>
+     
+    </div>
+  </div>
+</div>

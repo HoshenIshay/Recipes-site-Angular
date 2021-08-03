@@ -1,0 +1,51 @@
+.screen-reader-only {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  
+  }
+  #yesno{
+      width: 20px;
+  }
+  #form{
+   
+    direction: rtl;
+   background-color: rgb(241, 227, 200);
+    margin-right: auto;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ #abc{
+    display: flex;
+    flex-wrap: wrap;
+ }
+ #input{
+    margin: 30px;
+ }
+ #in{
+    width: 850px;
+    margin-top: 8px;
+ }
+ #in1{
+    
+    margin-top: 8px;
+ }
+ #save{
+    padding-top: 30px;
+    margin-right: 750px;
+ }
+ #aaa{
+    margin-top: 50px;
+    margin-right: 30px;
+ }
+ h4{
+    margin-top: 20px;
+   font-size: 20px;
+ }
+ #bb{
+    background-color:grey;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+ }

@@ -1,0 +1,29 @@
+<body>
+    <!-- <form class="search"> -->
+        <!-- <input type="text" placeholder="חיפוש..." name="search">
+        <button type="submit"  (click)="search()"><i class="fa fa-search"></i>
+          <img src="../assets/search.png" width="15" height="15"/>
+        </i></button> -->
+      <!-- </form> -->
+      <input type="text" placeholder="חיפוש..."  [(ngModel)]="sear" (input)="search()">
+      
+       
+      
+        <select name=select1 [(ngModel)]="catego"  (click)="search()">
+          בחר קטגוריה
+          <option value="4">הכל</option>
+          <option value="1">עוגות יום הולדת</option>
+          <option value="2">עוגיות</option>
+          <option value="3">עוגות</option>
+      </select >
+        <input type="number" placeholder=" הכנס מספר דקות מקסימלי" width="20px" [(ngModel)]="time"  (input)="search()" min="0"/>
+        <!-- <input type="button" value="חפש" (click)="search()" /> -->
+        <input type="button" value="נקה מסננים" (click)="clear()"/>
+   
+<div id="allRecipes">
+   
+    <app-images-details *ngFor="let x of arrFilter"  [thisRecipe]="x" >
+    
+    </app-images-details>
+</div>
+</body>

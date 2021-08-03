@@ -1,0 +1,103 @@
+
+<!-- <body>
+<form [formGroup]="myForm" (ngSubmit)="addUser(); myForm.reset()" class="container">
+    <h3>הרשמה</h3>
+    <div>
+    <label for="text"><b>תעודת זהות</b></label>
+    <input type="text" placeholder="הקש תעודת זהות" formControlName="id"  [(ngModel)]="UserCode" required>
+    <div *ngIf="myForm.controls.id.touched ">
+        *זהו שדה חובה
+    </div>
+    <div  *ngIf="myForm.controls.id.touched && myForm.controls.id.errors?.minLength">
+      תעודת זהות לא תקינה
+    </div>
+</div>
+<div>
+    <label for="text"><b>שם משתמש</b></label>
+    <input type="text" placeholder="הקש שם" formControlName="name"  [(ngModel)]="UserName" required>
+    <div *ngIf="myForm.controls.name.touched && myForm.controls.name.errors">
+        *זהו שדה חובה
+    </div>
+</div>
+<div>
+    <label for="text"><b>כתובת</b></label>
+    <input type="text" placeholder="הקש כתובת" formControlName="address"   [(ngModel)]="UserAddress"  required>
+    <div *ngIf="myForm.controls.address.touched && myForm.controls.address.errors">
+        *זהו שדה חובה
+    </div>
+</div>
+<div>
+    <label for="text"><b>אימייל</b></label>
+    <input type="email" placeholder="הקש כתובת אימייל" formControlName="mail" [(ngModel)]="UserMail" required>
+    <div *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors">
+        *זהו שדה חובה
+    </div>
+    <div class="pat" *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.pattern">
+        כתובת מייל אינה תקינה
+    </div> 
+</div>
+<div>
+    <label for="text"><b>סיסמא</b></label>
+    <input type="password" placeholder="הקש סיסמא" formControlName="pass"  [(ngModel)]="UserPassword" required>
+
+    <div *ngIf="myForm.controls.pass.touched && myForm.controls.pass.errors">
+        *זהו שדה חובה
+    </div>
+    <div  *ngIf="myForm.controls.pass.touched && myForm.controls.pass.errors?.minLength">
+        סיסמא חייבת להיות בין 4 ל10 תווים
+    </div> </div>
+
+    <button type="submit" class="btn"  [disabled]="!myForm.valid">הרשם</button>
+
+</form>
+</body> -->
+<!-- --------------------------------- -->
+
+<div id="reka">
+    <form action=""  [formGroup]="myForm" (ngSubmit)="addUser()" id="fff">
+        <h2><span class="entypo-login"><i class="fa fa-sign-in"></i></span> Register</h2>
+       
+        <span class="entypo-user inputUserIcon">
+           <i class="fa fa-user"></i>
+         </span>
+        <input type="text" class="user" placeholder="ursername" formControlName="name"   [(ngModel)]="UserName" name="name"/>
+        <span class="entypo-key inputPassIcon">
+           <i class="fa fa-key"></i>
+         </span>
+         <div  id="a" *ngIf="myForm.controls.name.touched && myForm.controls.name.errors">
+            *זהו שדה חובה
+        </div>
+        <input type="password" class="pass"placeholder="password" [(ngModel)]="UserPassword" formControlName="pass" required/>
+        <span class="entypo-key inputPassIcon">
+            <i class="fa fa-key"></i>
+          </span>
+          <div id="a" *ngIf="myForm.controls.pass.touched && myForm.controls.pass.errors">
+            סיסמא חייבת להיות בין 4 ל10 תווים
+        </div>
+        <div id="a" *ngIf="myForm.controls.pass.touched && myForm.controls.pass.errors?.minLength">
+            *זהו שדה חובה
+        </div>
+         <input type="text" class="id"placeholder="id"  formControlName="id"  [(ngModel)]="UserCode" required name="s"/>
+         <span class="entypo-key inputPassIcon">
+            <i class="fa fa-key"></i>
+          </span>
+         
+        <div id="a" *ngIf="myForm.controls.id.touched && myForm.controls.id.errors">
+         תעודת זהות לא תקינה
+        </div>
+         <input type="text" class="address"placeholder="address" [(ngModel)]="UserAddress"formControlName="address" required/>
+         <span class="entypo-key inputPassIcon">
+            <i class="fa fa-key"></i>
+          </span>
+          <div id="a"*ngIf="myForm.controls.address.touched && myForm.controls.address.errors">
+            *זהו שדה חובה
+        </div>
+         <input type="text" class="mail"placeholder="e-mail" [(ngModel)]="UserMail" formControlName="mail" required/>
+         <div id="a" *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors">
+            *זהו שדה חובה
+        </div>
+        <div id="a" class="pat" *ngIf="myForm.controls.mail.touched && myForm.controls.mail.errors?.pattern">
+            כתובת מייל אינה תקינה
+        </div>
+         <input class="sub" type="submit" [disabled]="!myForm.valid" value="register"/>
+    </form></div>

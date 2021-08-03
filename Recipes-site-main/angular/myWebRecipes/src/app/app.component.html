@@ -1,0 +1,30 @@
+
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+     <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class="nav-link" routerLink='login' id="link2" >log in</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="ifCanEdit()" routerLink='logOut'>log out</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='register'>register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='allRecipes'>all recipes</a>
+      </li>
+      <li class="nav-item" *ngIf="ifCanEdit()">
+        <a class="nav-link" routerLink='addRecipe'>add recipes</a>
+      </li>
+     
+     <!-- <li class="nav-item"id="search">
+        <input type="text" id="aaa" class="nav-link" placeholder="search"/>
+      </li> -->
+    </ul>
+  </nav>
+ <router-outlet></router-outlet>
+
+</body>
+
